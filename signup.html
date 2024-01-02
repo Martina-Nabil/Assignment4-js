@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <title>SignUP</title>
+</head>
+<body>
+        
+<section>
+    
+    <div class="container my-5 text-center">
+        <div class="w-75 mx-auto p-5 login-content">
+            <h1>Smart Login System</h1>
+
+            <div class="input-content">
+                <input type="text" class="form-control my-3" placeholder="Enter your Name" id="signupName" oninput="regexName()">
+                <span class="input-icon"><i class="fa-solid fa-user"></i></span>
+                <p id="nameMessage" class="error-message"></p>
+            </div>
+
+            <div class="input-content">
+                <input type="text" class="form-control my-3" placeholder="Enter your Email" id="signupEmail" oninput="regexEmail()">
+                <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
+                <p id="emailMessage" class="error-message"></p>
+            </div>
+
+            <div class="input-content">
+                <input type="password" class="form-control my-3" placeholder="Enter your Password" id="signupPassword" oninput="regexPassword()">
+                <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+                <span class="eye-icon"><i class="fa-solid fa-eye"></i></span>
+                <p id="passwordMessage" class="error-message"></p>
+            </div>
+
+            <button onclick="signup()" class="btn btn-outline-info w-100 my-3">Sign UP</button>
+            <p class="text-white">
+                You have an account? <a href="index.html">Signin</a>
+            </p>
+        </div>
+    </div>
+    
+    
+    
+    <div class="popup" id="successPopup">
+        <img src="images/404-tick.png" alt="">
+        <h2>Thank You</h2>
+        <p>Your Details have been Successfully Submitted</p>
+        <button id="successBtn">OK</button>
+    </div>
+    
+    <div class="popup" id="errorPopup">
+        <img src="images/pngegg.png" alt="">
+        <h2>Error</h2>
+        <p>Email Already Exists</p>
+        <button id="errorBtn">OK</button>
+    </div>
+    
+</section>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+</html>
